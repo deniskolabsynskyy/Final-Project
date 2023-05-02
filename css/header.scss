@@ -1,0 +1,74 @@
+.header{
+    background-color: #0c0724;
+    align-items: center;
+    &__photo{
+        width: 100px;
+        height: 25%;
+    }
+    &account__box{
+        &box{
+            &name{
+                font-size: 30px;
+                color: white;
+            }
+        }
+        font-size: 30px;
+        color: white;
+    }
+}
+
+
+
+.nav__ul__first{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+    height:60px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-left: 29.5%;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+    &logo{
+        width: 40px;
+        height: 40px;
+    }
+    &__li{
+        display: flex;
+    }
+    .steam{
+        font-size: 27px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+    .login{
+        border: none;
+        border-radius: 10px;
+        background-color: green;
+        color: white;
+        font-size: medium;
+        height: 30px;
+
+    }
+    .signin{
+        border: none;
+        border-radius: 10px;
+        background-color: green;
+        color: white;
+        font-size: medium;
+        height: 30px;
+    }
+    .download{
+        border: none;
+        background-color: green;
+        color: white;
+        font-size: medium;
+        height: 30px;
+    }
+}
+
+.logo{
+    width: 41px;
+    height: 40px;
+}

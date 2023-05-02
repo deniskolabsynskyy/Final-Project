@@ -1,0 +1,65 @@
+]
+    [
+        {
+            "id":1,
+            "amount":5,
+            "name":"Battlefield 5",
+            "Price":899.99,
+            "NewPrice":456.99,
+            "image":[
+                "./images/games/1/1",
+                "./images/games/1/2",
+                "./images/games/1/1",
+                "./images/games/1/2",
+                "./images/games/1/1",
+                "./images/games/1/2"
+            ],
+            "description":"Battlefield V is a first-person shooter video game and the sixteenth in the Battlefield series. Developed by EA DICE and published by Electronic Arts for Windows, PlayStation 4 and Xbox One. The game was announced on May 16, 2018 and first revealed on May 23, 2018."
+        }
+    ],
+
+
+
+
+    [
+        {
+            "id":2,
+            "amount":5,
+            "name":"Call of Duty Modern Warfare 2",
+            "Price":1499.99,
+            "NewPrice":1099.99,
+            "image":[
+                "./images/games/2/1",
+                "./images/games/2/2",
+                "./images/games/2/1",
+                "./images/games/2/2",
+                "./images/games/2/1",
+                "./images/games/2/2"
+            ],
+            "description":"
+            Call of Duty: Modern Warfare II is a first-person shooter video game developed by Infinity Ward and published by Activision. It is the 2019 sequel to Call of Duty: Modern Warfare and is also the nineteenth installment in the series."
+        }
+    ],
+
+
+
+
+    [
+        {
+            "id":3,
+            "amount":5,
+            "name":"Crysis 3",
+            "Price":999.99,
+            "NewPrice":679.99,
+            "image":[
+                "./images/games/3/1",
+                "./images/games/3/2",
+                "./images/games/3/1",
+                "./images/games/3/2",
+                "./images/games/3/1",
+                "./images/games/3/2"
+            ],
+            "description":"Crysis 3 is a multi-platform sci-fi first-person shooter video game developed by the German company Crytek and published by Electronic Arts. The game was released on February 19, 2013 in the US, February 21, 2013 in Europe for PC, Xbox 360 and PlayStation 3 platforms."
+        }
+    ],
+[
