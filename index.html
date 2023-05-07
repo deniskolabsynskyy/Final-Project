@@ -8,7 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Shop</title>
 </head>
 <body>
@@ -21,8 +28,8 @@
                         
                         Steam
                     </li>
-                    <li class="nav__li__first">
-                        View
+                    <li class="nav__li__first setting">
+                        Settings
                     </li>
                     <li class="nav__li__first">
                         Friends
@@ -41,8 +48,12 @@
                 </ul>
             </nav>
         </div>
+        
     </header>
     <div class="body">
+        <div class="header__settings hidden">
+                          
+        </div>
         <nav class="nav">
             <ul class="nav__ul">
                 <li class="nav__li">
@@ -57,130 +68,601 @@
                 <li class="nav__li">
                     Account management
                 </li>
-                <div class="nav__search">
-                    <p class="nav__search__text">search</p>
+                <div class="nav__li">
+                    <form class="search">
+                        <input type="text" id="name" placeholder="Search">
+                      </form>
                 </div>
             </ul>
         </nav>
-        <div class="daytext__box">
-            <h1 class="daytext__sale">
-                New products on sale
-            </h1>
-        </div>
-        <div class="swiper mySwiper">
-            <div class="swiper swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/bf.jpg">
-                        <div class="product-list">
-                          <h3 class="product-text">Battlefield 2042</h3>
-                            <span class="price">$ 79.99</span>
-                            <span class="price__sale">$ 13.99</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/minecraft.jpg">
-                        <div class="product-list">
-                          <h3 class="product-text">Minecraft Java Edition</h3>
-                            <span class="price">$ 99.99</span>
-                            <span class="price__sale">$ 19.99</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/farcry.jpg">
-                        <div class="product-list">
-                          <h3 class="product__text">Far Сry 5</h3>
-                            <span class="price">$ 69.99</span>
-                            <span class="price__sale">$ 17.99</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/cs.jpg">
-                        <div class="product-list">
-                          <h3 class="product-text">Counter Strike : Global Offensive</h3>
-                            <span class="price">$ 15.99</span>
-                            <span class="price__sale Free">Free</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/crysis.jpeg">
-                        <div class="product-list">
-                          <h3 class="product-text">Crysis 3  remastered</h3>
-                            <span class="price">$ 59.99</span>
-                            <span class="price__sale">$ 5.99</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="product-item">
-                        <img src="./images/rdr.jpg">
-                        <div class="product-list">
-                          <h3 class="product__text">Red Dead Redemption 2</h3>
-                            <span class="price">$ 89.99</span>
-                            <span class="price__sale">$ 23.99</span>
-                            <a href="" class="button">В корзину</a>
-                        </div>
+    </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/bf.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Battlefield 2042</h3>
+                        <span class="price">$ 99.99</span>
+                        <span class="price__sale">$ 69.99</span>
+                        <a href="" class="button">В корзину</a>
                     </div>
                 </div>
             </div>
-        <div class="container_for_tab">
-            <div class="button but_for_tab">Показать ещё</div>
-            <div class="selector__ul hidden_block tab_content">
-                <li class="selector__li">
-                    Arcade
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Multiplayer
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Co-Op
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Shooter
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    RPG
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Vr titles
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Simulator
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Sports
-                    <input type="checkbox">
-                </li>
-                <li class="selector__li">
-                    Strategy
-                    <input type="checkbox">
-                </li>
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/rdr.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Red Dead Redemption 2</h3>
+                        <span class="price">$ 79.99</span>
+                        <span class="price__sale">$ 29.99</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    <footer class="footer"> 
+            
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/crysis.jpeg">
+                    <div class="product-list">
+                      <h3 class="product__text">Crysis 3 remastred</h3>
+                        <span class="price">$ 59.99</span>
+                        <span class="price__sale">$ 19.99</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/callofduty.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Call of Duty Modern Warfare 2</h3>
+                        <span class="price">$ 69.99</span>
+                        <span class="price__sale">$ 39.99</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/cs.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Counter Strike : Global Offensive</h3>
+                        <span class="price">$ 15.99</span>
+                        <span class="price__sale Free">Free</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/battlefront.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Star Wars Battlefront 2</h3>
+                        <span class="price">$ 79.99</span>
+                        <span class="price__sale">$ 4.99</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="swiper-slide">
+                <div class="product-item">
+                    <img src="./images/farcry.jpg">
+                    <div class="product-list">
+                      <h3 class="product__text">Far Cry 5</h3>
+                        <span class="price">$ 59.99</span>
+                        <span class="price__sale">$ 12.99</span>
+                        <a href="" class="button">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reclama">
+        <img class="reclama__img1" src="./images/stalker2.jpg" alt="">
+        <div class="reclama__box">
+            <h1 class="text1">Stalker 2 : Heart of Chernobyl</h1>
+            <p class="text">
+                S.T.A.L.K.E.R. 2: Heart of Chornobyl  <br> is the new chapter in the legendary gaming  <br>
+                franchise from GSC Game World, loved  <br> by players and critically acclaimed.  <br>
+                Try on the costume of a stalker - an   <br> artifact hunter in the post-apocalyptic Chernobyl exclusion zone.
+            </p>
+            <button class="reclama__button">
+                Pre-Order Now
+            </button>
+        </div>
+    </div>
+    <div class="container_for_tab">
+        <div class="button but_for_tab">Show Menu</div>
+        <div class="selector__ul hidden_block tab_content">
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('action')" class="button but_for_tab">FPS</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('rpg')" class="button but_for_tab">RPG</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('Realistic')" class="button but_for_tab">Realistic</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('Rasing')" class="button but_for_tab">Rasing</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('Sandbox')" class="button but_for_tab">Sandbox</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('strategy')" class="button but_for_tab">Strategy</div>
+            </li>
+            <li class="selector__li">
+                <div  href="#" onclick="filterGames('all')" class="button but_for_tab">All</div>
+            </li>
+        </div>
+        <div class="allproducts  game action">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="FPS">
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <img src="./images/bf.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Battlefield 2042</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/crysis.jpeg">
+                            <div class="product-list">
+                              <h3 class="product__text">Crysis 3 remastred</h3>
+                                <span class="price1">$ 59.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/callofduty.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Call of Duty Modern Warfare 2</h3>
+                                <span class="price1">$ 69.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/cs.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Counter Strike : Global Offensive</h3>
+                                <span class="price1">$ 15.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/battlefront.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Star Wars Battlefront 2</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/farcry.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Far Cry 5</h3>
+                                <span class="price1">$ 59.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item game rpg" class="product-item">
+                            <img src="./images/rdr.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Red Dead Redemption 2</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allproducts  game rpg hidden">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/rdr.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Red Dead Redemption 2</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/eld.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Elden Ring</h3>
+                                <span class="price1">$ 59.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/bloodb.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">BloodBorne</h3>
+                                <span class="price1">$ 69.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/gothic.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Gothic</h3>
+                                <span class="price1">$ 39.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/Diablo1.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Diablo 2</h3>
+                                <span class="price1">$ 29.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/bio.jpeg">
+                            <div class="product-list">
+                              <h3 class="product__text">Bioshock</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allproducts  game Realistic">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/war.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">War Thunder</h3>
+                                <span class="price1 Free">Free</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/squad.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Squad</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/insurgency.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Insurgency Sandstorm</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/enlisted.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Enlisted</h3>
+                                <span class="price1 Free">Free</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/ready.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Ready or Not</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/forest.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">The Forest</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allproducts  game Rasing">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/need.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">NFS Most Wanted</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/forza.jpeg">
+                            <div class="product-list">
+                              <h3 class="product__text">NFS Most Wanted</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/gran.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Gran Turismo 7</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/f1.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Formula One : 2022</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/dirt.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Dirt Rally</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/grid1.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Grid Legends</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allproducts  game Sandbox">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/minecraft.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Minecraft java edition</h3>
+                                <span class="price1">$ 15.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/gta.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Grand Theft Auto 5</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/terra.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Terraria</h3>
+                                <span class="price1">$ 9.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/garry.jpeg">
+                            <div class="product-list">
+                              <h3 class="product__text">Garrys Mod</h3>
+                                <span class="price1 Free">Free</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/arm.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Arma 3</h3>
+                                <span class="price1">$ 59.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/hit.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Hitman Absolution</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allproducts  game strategy">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/xcom.jpeg">
+                            <div class="product-list">
+                              <h3 class="product__text">Xcom 2</h3>
+                                <span class="price1">$ 39.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/ci6.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Civilization 6</h3>
+                                <span class="price1">$ 99.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/st2.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Star Craft 2</h3>
+                                <span class="price1">$ 9.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/c.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Company of Heroes</h3>
+                                <span class="price1 Free">Free</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/dawn of war.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Warhammer 40k Dawn of War</h3>
+                                <span class="price1">$ 59.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div  class="product-item" class="product-item">
+                            <img src="./images/disperator.jpg">
+                            <div class="product-list">
+                              <h3 class="product__text">Disperators 3</h3>
+                                <span class="price1">$ 79.99</span>
+                                <a href="" class="button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer  class="footer">
+        <div class="footer__box">
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    
+                    Steam
+                </li>
+                <li class="footer__li">
+                    Settings
+                </li>
+                <li class="footer__li">
+                    Friends
+                </li>
+                <li class="footer__li">
+                    Games
+                </li>
+                <li class="footer__li">
+                    Help
+                </li>
+            </ul>
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    Telephone number
+                </li>
+                <li class="footer__li">
+                    Left Comment
+                </li>
+                <li class="footer__li">
+                    
+                </li>
+                <li class="footer__li">
+                    Games
+                </li>
+                <li class="footer__li">
+                    Help
+                </li>
+            </ul>
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    Telephone number
+                </li>
+                <li class="footer__li">
+                    Left Comment
+                </li>
+                <li class="footer__li">
+                    
+                </li>
+                <li class="footer__li">
+                    Games
+                </li>
+                <li class="footer__li">
+                    Help
+                </li>
+            </ul>
+        </div>
+        <p class="footer__copy"> All Rights Reserved © 2023  Steam -  Games & Items</p>
     </footer>
     <script src="./script.js"></script>
 </body>

@@ -1,0 +1,11 @@
+.footer{
+    &__box{
+        display: flex;
+        justify-content: space-between; 
+    }
+    background-color: #0c0724;
+    &__ul{
+        color: white;
+        width: 1100px;
+    }
+}
