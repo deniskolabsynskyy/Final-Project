@@ -5,8 +5,8 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
 const ts = require('gulp-typescript');
-const Swal = require('sweetalert2');
-const swiper = require('swiper');
+// const Swal = require('sweetalert2');
+// const swiper = require('swiper');
 
 
 const buildHtml = () => {

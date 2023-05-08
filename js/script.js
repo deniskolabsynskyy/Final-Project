@@ -213,12 +213,9 @@ filterGames("all");
 
 
 
-const genre = {
-  name: 'Sports',
-  img: './img/bg-image-6.png'
-}
+const genre = document.querySelectorAll('.products')
 
-const button = document.createElement('button')
+const button = document.querySelector('button')
 button.addEventListener('click', () => {
   const basket = localStorage.getItem('shop-basket');
 
@@ -242,3 +239,19 @@ button.addEventListener('click', () => {
 button.textContent = "BUY";
 
 const basket = JSON.parse(localStorage.getItem('shop-basket'));
+
+Swal.fire({
+  title: '<strong>Log in</strong>',
+  html:
+    'E-Mail <br><input></input> <br> ' +
+    'Password  <br><input></input> ' ,
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> Log in',
+    confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> I have Been Already Loginned',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonAriaLabel: '<p>I have Been Already Loginned</p>'
+})
