@@ -57,10 +57,23 @@ table {
 .footer__box {
   display: flex;
   justify-content: space-between;
+  width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__ul {
   color: white;
-  width: 1100px;
+  width: 1000px;
+}
+
+.logo1 {
+  width: 40px;
+  height: 40px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
 }
 .header {
   background-color: #0c0724;
@@ -125,6 +138,11 @@ table {
   color: white;
   font-size: medium;
   height: 30px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .logo {
@@ -197,6 +215,7 @@ body {
   position: absolute;
   color: white;
   border-radius: 30px;
+  margin-top: 100px;
   margin-bottom: 700px;
   margin-left: 25px;
 }
@@ -218,6 +237,7 @@ body {
   position: absolute;
   width: 500px;
   align-items: flex-start;
+  margin-left: 220px;
 }
 
 .reclama__img1 {
@@ -506,4 +526,19 @@ button:active {
 
 .footer__copy {
   color: white;
+}
+
+.total {
+  color: #ddd;
+}
+
+.cart {
+  display: none;
+  justify-content: space-between;
+  background-color: #0c0724;
+  margin-bottom: 20PX;
+}
+
+.gf {
+  margin-bottom: 10px;
 }

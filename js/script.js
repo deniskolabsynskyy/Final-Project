@@ -213,45 +213,50 @@ filterGames("all");
 
 
 
-const genre = document.querySelectorAll('.products')
+// Swal.fire({
+//   title: '<strong>Log in</strong>',
+//   html:
+//     'E-Mail <br><input></input> <br> ' +
+//     'Password  <br><input></input> ' ,
+//   showCloseButton: true,
+//   showCancelButton: true,
+//   focusConfirm: false,
+//   confirmButtonText:
+//     '<i class="fa fa-thumbs-up"></i> Log in',
+//     confirmButtonText:
+//     '<i class="fa fa-thumbs-up"></i> I have Been Already Loginned',
+//   confirmButtonAriaLabel: 'Thumbs up, great!',
+//   cancelButtonAriaLabel: '<p>I have Been Already Loginned</p>'
+// })
 
-const button = document.querySelector('button')
-button.addEventListener('click', () => {
-  const basket = localStorage.getItem('shop-basket');
 
-  if(basket) {
-      const JSONBasket = JSON.parse(basket);
-      JSONBasket.push(genre);
 
-      localStorage.setItem('shop-basket', JSON.stringify(JSONBasket))
-  } else {
-      const arrBasket = [];
 
-      arrBasket.push(genre);
+let total = 0;
+let clicks = 0 ; 
+const products = document.querySelectorAll('.product-item');
+const cart = document.querySelector('#cart');
+const totalElement = document.querySelector('#total');
+const toggleCartButton = document.querySelector('#toggle-cart');
 
-      localStorage.setItem('shop-basket', JSON.stringify(arrBasket))
-  }
+products.forEach(product => {
+    const button = product.querySelector('.button');
+    button.addEventListener('click', () => {
+        clicks + 1 ; 
+        const price = parseInt(product.dataset.price);
+        total += price;
+        totalElement.textContent = total;
+        const item = product.cloneNode(true);
+        item.querySelector('button').remove();
+        button.textContent = 'cancel';
+        cart.appendChild(item);
+    });
+});
 
-  // при натисканні у вас вже може бути корзин
-  // при натисканні корзини може не бути
-
-})
-button.textContent = "BUY";
-
-const basket = JSON.parse(localStorage.getItem('shop-basket'));
-
-Swal.fire({
-  title: '<strong>Log in</strong>',
-  html:
-    'E-Mail <br><input></input> <br> ' +
-    'Password  <br><input></input> ' ,
-  showCloseButton: true,
-  showCancelButton: true,
-  focusConfirm: false,
-  confirmButtonText:
-    '<i class="fa fa-thumbs-up"></i> Log in',
-    confirmButtonText:
-    '<i class="fa fa-thumbs-up"></i> I have Been Already Loginned',
-  confirmButtonAriaLabel: 'Thumbs up, great!',
-  cancelButtonAriaLabel: '<p>I have Been Already Loginned</p>'
-})
+toggleCartButton.addEventListener('click', () => {
+    if (cart.style.display === 'none') {
+        cart.style.display = 'block';
+    } else {
+        cart.style.display = 'none';
+    }
+});

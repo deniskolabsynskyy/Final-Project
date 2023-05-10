@@ -60,6 +60,7 @@ body{
     position: absolute;
     color:white;
     border-radius: 30px;
+    margin-top: 100px;
     margin-bottom: 700px;
     margin-left: 25px;
     .text1{
@@ -81,6 +82,7 @@ body{
   position: absolute;
   width: 500px;
   align-items:flex-start;
+  margin-left: 220px;
 
 }
 .reclama__img1{
@@ -362,4 +364,17 @@ body {
   &__copy{
     color: white;
   }
+}
+.total{
+  color: #ddd;
+}
+.cart{
+  display: none;
+  justify-content: space-between;
+  background-color: #0c0724;
+  margin-bottom: 20PX;
+}
+
+.gf{
+  margin-bottom: 10px;
 }
